@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    // подсвечивает места, где не указан тип
+    "noImplicitAny": true,
+    "module": "esnext",
+    // стандарт ecma script, в который будет компилироваться в итоге js
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    // позволяет вместо (когда какая то библиотека не имеет дефолтного импорта)
+    // import * as React from "react"
+    // импортировать так
+    // import React from "react"
+    "allowSyntheticDefaultImports": true,
+    // позволяет работать с пакетами, которые используют commonjs, как с обычными пакетами с помощью import
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}

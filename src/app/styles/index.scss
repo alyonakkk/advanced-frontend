@@ -1,0 +1,17 @@
+@import "vars/global";
+@import "normalize";
+@import "theme/light";
+@import "theme/dark";
+
+.app {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+
+  min-height: 100vh;
+}
+
+.title {
+  font: var(--font-l);
+
+  color: var(--primary-color);
+}
