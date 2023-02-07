@@ -4,14 +4,19 @@
 @import "theme/dark";
 
 .app {
-  background-color: var(--bg-color);
-  color: var(--primary-color);
-
-  min-height: 100vh;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
 }
 
-.title {
-  font: var(--font-l);
+.container {
+    padding: 20px;
+}
 
-  color: var(--primary-color);
+.content {
+    display: flex;
+}
+
+.main {
+    flex-grow: 1;
 }

@@ -1,7 +1,7 @@
-import {ResolveOptions} from "webpack";
-import {IBuildOptions} from "./types/config";
+import { type ResolveOptions } from "webpack";
+import { type IBuildOptions } from "./types/config";
 
-function resolvers({paths}: IBuildOptions): ResolveOptions {
+function resolvers ({ paths }: IBuildOptions): ResolveOptions {
     return {
         // позволяет не указывать расширения в конце файлов при импорте с расширениями .tsx, .ts, .js
         extensions: [".tsx", ".ts", ".js"],
@@ -10,7 +10,7 @@ function resolvers({paths}: IBuildOptions): ResolveOptions {
         alias: {
             "@": paths.src
         }
-    }
+    };
 }
 
 export default resolvers;

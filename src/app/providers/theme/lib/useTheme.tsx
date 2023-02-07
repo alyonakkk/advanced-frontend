@@ -1,6 +1,6 @@
-import {useContext} from "react";
-import {THEME} from "@/app/providers/theme/types";
-import {ThemeContext} from "@/app/providers/theme";
+import { useContext } from "react";
+import { THEME } from "@/app/providers/theme/types";
+import { ThemeContext } from "@/app/providers/theme";
 
 interface IUseTheme {
     theme: THEME;
@@ -8,22 +8,22 @@ interface IUseTheme {
 }
 
 const useTheme = (): IUseTheme => {
-    const {theme, setTheme} = useContext(ThemeContext);
+    const { theme, setTheme } = useContext(ThemeContext);
 
-    function toggleTheme() {
+    function toggleTheme (): void {
         switch (theme) {
             case THEME.light:
-                setTheme(THEME.dark)
+                setTheme(THEME.dark);
                 break;
             case THEME.dark:
-                setTheme(THEME.light)
+                setTheme(THEME.light);
                 break;
             default:
                 break;
         }
     }
 
-    return {theme, toggleTheme}
-}
+    return { theme, toggleTheme };
+};
 
 export default useTheme;

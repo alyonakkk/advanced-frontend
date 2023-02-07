@@ -1,0 +1,13 @@
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: var(--siderbar-height);
+    height: 100vh;
+    background-color: var(--bg-color-inversion);
+    transition: width 0.3s;
+}
+
+.collapsed {
+    width: var(--siderbar-height-collapsed);
+}

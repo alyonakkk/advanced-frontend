@@ -1,16 +1,29 @@
-import webpack from "webpack";
+import type webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import {IBuildOptions} from "./types/config";
+import { type IBuildOptions } from "./types/config";
 
-function loaders({mode}: IBuildOptions): webpack.RuleSetRule[] {
+function loaders ({ mode }: IBuildOptions): webpack.RuleSetRule[] {
     const isDev = mode === "development";
 
     return [
+        {
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+                {
+                    loader: "file-loader"
+                }
+            ]
+        },
+        {
+            test: /\.svg$/i,
+            issuer: /\.[jt]sx?$/,
+            use: ["@svgr/webpack"]
+        },
         // если не используем ts, то нужен лоадер babel-loader
         {
             test: /\.tsx?$/,
             use: "ts-loader",
-            exclude: /node_modules/,
+            exclude: /node_modules/
         },
         // позволяет использовать стили
         {
@@ -31,10 +44,10 @@ function loaders({mode}: IBuildOptions): webpack.RuleSetRule[] {
                     }
                 },
                 // Compiles Sass to CSS
-                "sass-loader",
-            ],
+                "sass-loader"
+            ]
         }
-    ]
+    ];
 }
 
 export default loaders;
