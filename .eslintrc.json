@@ -24,6 +24,8 @@
         "i18next/no-literal-string": ["error", {
             "markupOnly": true
         }],
+        "react/display-name": 0,
+        "@typescript-eslint/prefer-includes": 0,
         "react/react-in-jsx-scope": 0,
         "@typescript-eslint/prefer-nullish-coalescing": 0,
         "@typescript-eslint/strict-boolean-expressions": 0,

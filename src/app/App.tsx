@@ -1,4 +1,4 @@
-import { type FC, Suspense } from "react";
+import { type FC, Suspense, useEffect } from "react";
 import "@/app/styles/index.scss";
 import { useTheme } from "@/app/providers/theme";
 import classNames from "@/shared/lib/classNames";
@@ -8,6 +8,10 @@ import AppRoute from "@/app/providers/router";
 
 const App: FC = () => {
     const { theme } = useTheme();
+
+    useEffect(() => {
+        throw new Error();
+    }, []);
 
     return (
         <div className={classNames("app", { hovered: true }, [theme])}>

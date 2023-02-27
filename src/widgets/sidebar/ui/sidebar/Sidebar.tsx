@@ -16,8 +16,16 @@ const Sidebar: FC<ISidebar> = ({ className }) => {
     }
 
     return (
-        <div className={classNames(style.Sidebar, { [style.collapsed]: isCollapsed }, [className])}>
-            <button onClick={onToggleSidebar}>{isCollapsed ? "open" : "close"}</button>
+        <div
+            data-testid={"sidebar"}
+            className={classNames(style.Sidebar, { [style.collapsed]: isCollapsed }, [className])}
+        >
+            <button
+                data-testid={"sidebar-toggle"}
+                onClick={onToggleSidebar}
+            >
+                {isCollapsed ? "open" : "close"}
+            </button>
             <LangSwitcher />
             <ThemeSwitcher />
         </div>

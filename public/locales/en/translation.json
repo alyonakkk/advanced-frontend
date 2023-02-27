@@ -2,5 +2,7 @@
   "Язык": "Lang",
   "Главная": "Main page",
   "О компании": "About page",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Перезагрузить страницу": "Reload page",
+  "Произошла ошибка": "Something went wrong"
 }

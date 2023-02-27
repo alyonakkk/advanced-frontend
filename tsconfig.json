@@ -21,9 +21,15 @@
       "@/*": ["./src/*"]
     }
   },
+  "types": ["@types/jest"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/",
+    "webpack.config.ts",
+    "./src/"
+  ]
 }
